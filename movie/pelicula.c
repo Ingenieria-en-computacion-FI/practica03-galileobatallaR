@@ -51,7 +51,7 @@ void cambiarGenero(Pelicula* p, char* nuevoGenero)
 void agregarDirector(Pelicula* p, char* director)
 {
    if(p->numDirectores >= 10){
-   printf("Maximo de directores alcanzado\n");
+   printf("Max de directores alcanzado\n");
    return;
    
 }
