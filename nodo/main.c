@@ -2,15 +2,15 @@
 #include "nodo.h"
 
 int main() {
-    nodo* nodopro = crearNodo(10);
+    nodo* nodoM = crearNodo(10);
 
-    if (nodopro != NULL) {
-        printf("Valor inicial: %d\n", obtenerValor(nodopro));
+    if (nodoM != NULL) {
+        printf("Valor inicial: %d\n", obtenerValor(nodoM));
 
-        asignarValor(nodopro, 25);
-        printf("Nuevo valor: %d\n", obtenerValor(nodopro));
+        asignarValor(nodoM, 25);
+        printf("Nuevo valor: %d\n", obtenerValor(nodoM));
 
-        destruirNodo(nodopro);
+        destruirNodo(nodoM);
     }
 
     return 0;
