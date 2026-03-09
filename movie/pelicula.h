@@ -1,24 +1,12 @@
 #ifndef __PELICULA_H__
 #define __PELICULA_H__
 
-#define MAX_DIRECTORES 10
-
-/* Tipo opaco */
 typedef struct Pelicula Pelicula;
 
-/* Crear una película */
-Pelicula* crearPelicula(const char* titulo, int anio, const char* genero);
-
-/* Imprimir información de la película */
+Pelicula* crearPelicula(char* titulo, char* genero);
 void imprimir(Pelicula* p);
-
-/* Cambiar el género */
-void cambiarGenero(Pelicula* p, const char* nuevoGenero);
-
-/* Agregar un director */
-void agregarDirector(Pelicula* p, const char* director);
-
-/* Liberar memoria */
+void cambiarGenero(Pelicula* p, char* nuevoGenero);
+void agregarDirector(Pelicula* p, char* director);
 void destruir(Pelicula* p);
 
 #endif
