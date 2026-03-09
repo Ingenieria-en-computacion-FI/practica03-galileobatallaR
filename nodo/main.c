@@ -1,35 +1,17 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include "nodo.h"
 
-struct Nodo {
-    int dato;
-};
+int main() {
+    nodo* nodopro = crearNodo(10);
 
-nodo* crearNodo(int valor) {
-    nodo* nuevo = (nodo*)malloc(sizeof(nodo));
-    if (nuevo == NULL) {
-        perror("No es posible");
-        return NULL;
+    if (nodopro != NULL) {
+        printf("Valor inicial: %d\n", obtenerValor(nodopro));
+
+        asignarValor(nodopro, 25);
+        printf("Nuevo valor: %d\n", obtenerValor(nodopro));
+
+        destruirNodo(nodopro);
     }
-    nuevo->dato = valor;
-    return nuevo;
-}
 
-int obtenerValor(nodo* n) {
-    if (n == NULL) return 0; 
-    return n->dato;
-}
-
-void asignarValor(nodo* n, int nuevoValor) {
-    if (n != NULL) {
-        n->dato = nuevoValor;
-    }
-}
-
-void destruirNodo(nodo* n) {
-    if (n != NULL) {
-        free(n);
-        printf("Ya no existe \n");
-    }
+    return 0;
 }
